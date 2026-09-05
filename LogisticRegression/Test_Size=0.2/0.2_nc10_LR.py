@@ -38,7 +38,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 from sklearn.decomposition import PCA
 # Apply PCA to reduce dimensionality (fit only on training data)
-pca = PCA(n_components=15)
+pca = PCA(n_components=10)
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 
