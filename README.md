@@ -37,7 +37,7 @@ The results are compared across different algorithms, test sizes, and PCA config
 
 ### 👨‍💻 Contributors
 
-* **Vishad Jain**
-* **Mihir Saurabh**
+- [Vishad Jain](https://github.com/Inf3rno26)
+- [Mihir Saurabh](https://github.com/Mihir2907)
 
 > 📌 This project is created for academic and learning purposes as part of our Semester 3 coursework.
