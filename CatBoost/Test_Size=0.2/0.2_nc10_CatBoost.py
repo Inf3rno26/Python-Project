@@ -31,7 +31,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     y,
-    test_size=0.6,
+    test_size=0.2,
     random_state=0,
     stratify=y
 )
@@ -41,7 +41,6 @@ from sklearn.decomposition import PCA
 pca = PCA(n_components=10)
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
-
 
 from catboost import CatBoostClassifier
 classifier = CatBoostClassifier()

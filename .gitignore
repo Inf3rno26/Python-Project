@@ -1,5 +1,6 @@
 # Large datasets
 *.csv
+catboost_info
 
 # Python
 __pycache__/
