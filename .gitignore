@@ -9,3 +9,7 @@ __pycache__/
 # Virtual environment
 venv/
 .venv/
+
+# DS STORE AND PDF
+.DS_STORE
+*.pdf
