@@ -31,22 +31,27 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     y,
-    test_size=0.6,
+    test_size=0.2,
     random_state=0,
     stratify=y
 )
 
 from sklearn.decomposition import PCA
 # Apply PCA to reduce dimensionality (fit only on training data)
-pca = PCA(n_components=10)
+pca = PCA(n_components=5)
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 
 
-from catboost import CatBoostClassifier
-classifier = CatBoostClassifier()
-classifier.fit(X_train, y_train)
-y_pred = classifier.predict(X_test)
+# kernel can be swapped: 'rbf', 'linear', 'poly', etc.
+from sklearn.linear_model import ElasticNet
+regressor = ElasticNet(alpha=0.1, l1_ratio=0.5)
+regressor.fit(X_train, y_train)
+y_pred = regressor.predict(X_test)
+ 
+y_pred = np.rint(y_pred).astype(int)
+y_pred = np.clip(y_pred, 0, 2)
+
 
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score

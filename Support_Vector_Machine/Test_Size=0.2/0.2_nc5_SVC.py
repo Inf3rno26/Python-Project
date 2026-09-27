@@ -45,8 +45,18 @@ X_test = pca.transform(X_test)
 
 # kernel can be swapped: 'rbf', 'linear', 'poly', etc.
 from sklearn.svm import SVC
-classifier = SVC(kernel='rbf', probability=True, random_state=0)
+
+classifier = SVC(
+    kernel='rbf',
+    probability=False,
+    cache_size=4096,
+    shrinking=True,
+    tol=1e-3
+)
+
+
 classifier.fit(X_train, y_train)
+
 y_pred = classifier.predict(X_test)
  
 
