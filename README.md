@@ -1,29 +1,28 @@
-# Machine Learning Project 🤖
+# Machine Learning Project 
 
 This repository contains our **Semester 3 Machine Learning project**, developed as part of our university coursework.
 
 Our project focuses on **Network Detection for a company**, using network data collected across different days. We are experimenting with different ML algorithms, test sizes, and PCA configurations to compare their performance.
 
-### 🛠️ Tech Stack
+### - Tech Stack
 
-* Python 🐍
+* Python 
 * NumPy
 * Pandas
 * Matplotlib
 * Seaborn
 * Scikit-learn
 
-### 🧠 ML Algorithms
+### - ML Algorithms
 
-We are using 5 different ML algorithms:
+We are using 4 different ML algorithms:
 
 1. Logistic Regression
 2. **Elastic Net**
-3. **Support Vector Machine**
-4. **CatBoost**
-5. **k-Nearest Neighbors**
+3. **CatBoost**
+4. **k-Nearest Neighbors**
 
-### 📊 Experiments
+### - Experiments
 
 We test the models with different **test sizes**:
 
@@ -35,7 +34,7 @@ We also use **PCA (Principal Component Analysis)** with:
 
 The results are compared across different algorithms, test sizes, and PCA configurations to see how each setup affects model performance.
 
-### 👨‍💻 Contributors
+### - Contributors
 
 - [Vishad Jain](https://github.com/Inf3rno26)
 - [Mihir Saurabh](https://github.com/Mihir2907)
